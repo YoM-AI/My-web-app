@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web App</title>
+</head>
+
+<body>
+
+<h1>数学クイズ</h1>
+
+<p id="question"></p>
+
+<input id="answer">
+
+<button onclick="check()">回答</button>
+
+<p id="result"></p>
+
+<script>
+
+let a = Math.floor(Math.random()*10)
+let b = Math.floor(Math.random()*10)
+
+document.getElementById("question").innerText =
+a + " + " + b + " = ?"
+
+function check(){
+
+let ans =
+document.getElementById("answer").value
+
+if(ans == a + b){
+document.getElementById("result").innerText =
+"正解！"
+}else{
+document.getElementById("result").innerText =
+"不正解"
+}
+
+}
+
+</script>
+
+</body>
+</html>
